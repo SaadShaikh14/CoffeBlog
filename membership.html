@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership - Dark Roast Coffee</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #f5f5f5;
+        }
+
+        header {
+            background-color: #2a2a2a;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #d4af37;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #f5f5f5;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #d4af37;
+            color: #1e1e1e;
+            border-radius: 5px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .content h2 {
+            color: #d4af37;
+        }
+
+        .content p {
+            line-height: 1.6;
+        }
+
+        .membership-benefits {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #444;
+            border-radius: 8px;
+        }
+
+        .membership-benefits ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .membership-benefits ul li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .membership-benefits ul li::before {
+            content: '\2022';
+            color: #d4af37;
+            position: absolute;
+            left: 0;
+        }
+
+        .payment-methods {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #444;
+            border-radius: 8px;
+        }
+
+        .payment-methods .payment-option {
+            display: inline-block;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .payment-methods img {
+            width: 80px;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .payment-methods span {
+            display: block;
+            color: #f5f5f5;
+            font-size: 0.9em;
+        }
+
+        .payment-methods button {
+            display: block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #d4af37;
+            border: none;
+            color: #1e1e1e;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .payment-methods button:hover {
+            background-color: #c39b31;
+        }
+
+        footer {
+            background-color: #2a2a2a;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dark Roast Coffee</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About</a>
+            <a href="membership.html">Membership</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="content" id="membership">
+        <h2>Membership</h2>
+        <p>
+            Become a member of the Dark Roast Coffee community and unlock exclusive benefits designed for true coffee enthusiasts. Join today and let us take your coffee experience to the next level.
+        </p>
+
+        <div class="membership-benefits">
+            <h3>Membership Benefits</h3>
+            <ul>
+                <li>Exclusive discounts on all products and subscriptions</li>
+                <li>Early access to limited-edition coffee blends</li>
+                <li>Free monthly coffee tasting events</li>
+                <li>Complimentary brewing guides and tips</li>
+                <li>Priority customer support</li>
+            </ul>
+        </div>
+
+        <div class="payment-methods">
+            <h3>Accepted Payment Methods</h3>
+            <div class="payment-option">
+                <img src="img/visa.png" alt="Visa">
+                <span>Visa</span>
+            </div>
+            <div class="payment-option">
+                <img src="img/mastercard.png" alt="MasterCard">
+                <span>MasterCard</span>
+            </div>
+            <div class="payment-option">
+                <img src="img/paypal.png" alt="PayPal">
+                <span>PayPal</span>
+            </div>
+            <div class="payment-option">
+                <img src="img/gpay.png" alt="Google Pay">
+                <span>Google Pay</span>
+            </div>
+            <button id="pay-now">Proceed to Payment</button>
+        </div>
+
+        <p>
+            Joining is easy! Choose the plan that suits your needs and enjoy the perks of being part of our passionate coffee community.
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Dark Roast Coffee | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const benefits = document.querySelector('.membership-benefits ul');
+            const message = document.createElement('p');
+            message.textContent = 'Sign up today to start enjoying these benefits!';
+            message.style.color = '#d4af37';
+            message.style.fontWeight = 'bold';
+            benefits.parentElement.appendChild(message);
+
+            const payButton = document.getElementById('pay-now');
+            payButton.addEventListener('click', () => {
+                alert('Redirecting to payment gateway...');
+            });
+        });
+    </script>
+</body>
+</html>
